@@ -17,3 +17,7 @@ const createWorkout = AsyncHandler(async (req, res) => {
         time,
     });
 });
+
+export {
+    createWorkout
+};

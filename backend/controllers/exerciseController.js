@@ -19,3 +19,7 @@ const createExercise = AsyncHandler(async (req, res) => {
         equipment 
     });
 });
+
+export {
+    createExercise
+};

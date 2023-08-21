@@ -1,10 +1,17 @@
+import Header from "./components/Header"
+import { Container } from "react-bootstrap"
+import { Outlet } from "react-router-dom"
+
 const App = () => {
     return (
       <>
-        <h1>Minotaur</h1>
+        <Header />
+        <Container className="my-2"> 
+        <Outlet />
+        </Container>
         
       </>
-    )
-}
+    );
+};
 
-export default App
+export default App;
