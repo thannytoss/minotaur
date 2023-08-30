@@ -76,7 +76,8 @@ const getUserProfile = asyncHandler(async (req, res) => {
         _id: req.user._id,
         name: req.user.name,
         email: req.user.email,
-        workouts: req.user.workouts
+        workouts: req.user.workouts,
+        exercises: req.user.exercises
     }
     res.status(200).json({user});
 });
@@ -91,6 +92,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
         user.name = req.body.name || user.name;
         user.email = req.body.email || user.email;
         user.workouts = req.body.workouts || user.workouts;
+        user.exercises = req.body.exercises || user.exercises;
 
         if (req.body.password) {
             user.password = req.body.password;
@@ -101,7 +103,9 @@ const updateUserProfile = asyncHandler(async (req, res) => {
         _id: updatedUser._id,
         name: updatedUser.name,
         email: updatedUser.email,
-        workouts: updatedUser.workouts
+        workouts: updatedUser.workouts,
+        exercises: updatedUser.exercises
+
        });
     } else {
         res.status(404);
