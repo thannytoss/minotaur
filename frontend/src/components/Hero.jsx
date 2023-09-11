@@ -1,4 +1,5 @@
 import { Container, Card, Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const Hero = () => {
   return (
@@ -10,12 +11,18 @@ const Hero = () => {
             This is a small workout app designed to track exercises and weights.
           </p>
           <div className='d-flex'>
-            <Button variant='primary' href='/login' className='me-3'>
-              Login
-            </Button>
-            <Button variant='secondary' href='/register'>
-              Get Started
-            </Button>
+            <LinkContainer to='/login'>
+              <Button variant='primary' className='me-3'>
+                Login
+              </Button>
+            </LinkContainer>
+
+            <LinkContainer to='/register'>
+              <Button variant='secondary'>
+                Get Started
+              </Button>
+            </LinkContainer>
+
           </div>
         </Card>
       </Container>
