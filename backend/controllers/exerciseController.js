@@ -1,5 +1,5 @@
 import asyncHandler from "express-async-handler";
-import Exercise from "../models/exerciseModel";
+import Exercise from "../models/exerciseModel.js";
 
 // create new exercise
 //Post /api/user/profile/exercises
