@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const workoutSchema = mongoose.Schema({
+const exerciseSchema = mongoose.Schema({
   name: {
     type: String,
     required: true,
