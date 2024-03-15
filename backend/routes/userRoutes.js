@@ -8,7 +8,7 @@ import {
 } from "../controllers/userController.js";
 import {
   createExercise,
-  updateUserExercise,
+  updateUserExercises,
 } from "../controllers/exerciseController.js";
 const router = express.Router();
 import { protectRoutes } from "../middleware/authMiddleware.js";
@@ -23,6 +23,6 @@ router
 router
   .route("/exercise")
   .post(protectRoutes, createExercise)
-  .put(protectRoutes, updateUserExercise);
+  .put(protectRoutes, updateUserExercises);
 
 export default router;
