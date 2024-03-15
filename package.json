@@ -25,6 +25,7 @@
   "devDependencies": {
     "concurrently": "^8.2.0",
     "nodemon": "^2.0.22",
+    "prettier": "3.2.5",
     "vite": "^5.1.6"
   }
 }
